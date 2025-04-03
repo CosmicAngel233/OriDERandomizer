@@ -106,6 +106,7 @@ public static class Randomizer
             Randomizer.WarpLogicLocations = new Hashtable();
             Keysanity.Initialize();
             Randomizer.EnhancedMode = false;
+            Randomizer.SeinTalks = false;
 
             if (Randomizer.SeedFilePath == null)
             {
@@ -1293,6 +1294,9 @@ public static class Randomizer
 
             if (flag == "enhanced")
                 Randomizer.EnhancedMode = true;
+
+            if (flag == "seintalks")
+                Randomizer.SeinTalks = true;
         }
         return doBingo;
     }
@@ -1688,4 +1692,6 @@ public static class Randomizer
     private static System.Random unseededRandom;
 
     public static bool EnhancedMode;
+
+    public static bool SeinTalks;
 }
